@@ -10,13 +10,16 @@ import Experience from "../components/Experience.astro";
 import SectionContainer from "../components/SectionContainer.astro";
 import Perspective from "../icons/perspective.astro";
 import Maletin from "../icons/maletin.astro";
+import Code from "../icons/Code.astro";
+import Projects from "../components/Projects.astro";
 ---
 
 <Layout title="Portafolio de Geider - Desarrollador y Programador Full Stack">
-	<main>
+	<main class="px-4">
 		<SectionContainer class="py-44 pb-22">
 			<h1
-				class="text-white text-5xl font-bold flex flex-row gap-x-4 pb-4"
+				class="text-white text-3xl md:text-4xl lg:text-5xl 
+				font-bold flex flex-row gap-x-4 pb-3 lg:pb-4"
 			>
 				Hola, soy Geider Montaño <a
 					href="https://www.linkedin.com/in/geider-andr%C3%A9s-monta%C3%B1o-zalazar-430393247/"
@@ -28,7 +31,7 @@ import Maletin from "../icons/maletin.astro";
 						<Badge>Listo para Chambear</Badge>
 					</div>
 				</a>
-				<h2 class="text-2xl text-wrap">
+				<h2 class="text-xl lg:text-2xl text-wrap max-w-[700px]">
 					<span
 						>Estoy aprendiendo a programar y a crear sitios web.
 					</span>
@@ -37,21 +40,21 @@ import Maletin from "../icons/maletin.astro";
 					</span>
 				</h2>
 
-				<nav class="flex gap-x-5 mt-2">
+				<nav class="flex gap-5 mt-8 flex-wrap">
 					<SocialPill
 						href="https://www.linkedin.com/in/geider-andr%C3%A9s-monta%C3%B1o-zalazar-430393247/"
 					>
-						<LinkedIn class="size-5" />
+						<LinkedIn class="size-5 md-size-7" />
 						 LinkedIn
 					</SocialPill>
 					
 					<SocialPill href="https://github.com/KPOETA1">
-						<GitHub class="size-5" />
+						<GitHub class="size-5 md-size-7" />
 						 GitHub
 					</SocialPill>
 
 					<SocialPill href="https://github.com/KPOETA1">
-						<Mail class="size-5" />
+						<Mail class="size-5 md-size-7" />
 						 Geideran808087@gmail.com
 					</SocialPill>
 
@@ -67,6 +70,15 @@ import Maletin from "../icons/maletin.astro";
 			</h2>
 			<Perspective class="size-6" />
 			<Experience/>
+		</SectionContainer>
+
+		<SectionContainer id="Proyectos">
+			<h2 class="text-2xl font-semibold mb-5 flex gap-x-3 items-center"> 
+				<Code class="size-7" />
+				Proyectos
+			</h2>
+			<Projects/>
+
 		</SectionContainer>
 
 	</main>
