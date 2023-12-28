@@ -1,0 +1,57 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Card from "../components/Card.astro";
+import Badge from "../components/Badge.astro";
+import LinkedIn from "../icons/LinkedIn.astro";
+import GitHub from "../icons/GitHub.astro";
+---
+
+<Layout title="Welcome to Astro.">
+	<main>
+		<section class="w-full lg:w-[740px] mx-auto py-44">
+			<h1
+				class="text-white text-5xl font-bold flex flex-row gap-x-4 pb-4"
+			>
+				Hola, soy Geider Montaño <a 
+				href="https://www.linkedin.com/in/geider-andr%C3%A9s-monta%C3%B1o-zalazar-430393247/"
+				target="_blank"
+				rel="noopener"
+				class="flex justify-center items-center"
+				>
+				<div class="flex justify-center items-center">
+					<Badge>Listo para Chambear</Badge>
+				</div>
+			</h1>
+			<h2 class="text-2xl text-wrap">
+				<span>Estoy aprendiendo a programar y a crear sitios web. </span> <span class="opacity-80" >Me gusta
+					mucho el diseño y la programación. </span>
+			</h2>
+
+			<ul>
+				<li>
+					<a
+						href="https://www.linkedin.com/in/geider-andr%C3%A9s-monta%C3%B1o-zalazar-430393247/"
+						target="_blank"
+						rel="noopener"
+						class="flex justify-center items-center"
+					>
+						<LinkedIn class="w-6 h-6" />
+					</a>
+				</li>
+
+				<li>
+					<a
+						href="https://github.com/KPOETA1"
+						target="_blank"
+						rel="noopener"
+						class="flex justify-center items-center"
+					>
+						<GitHub class="w-6 h-6" />
+					</a>
+
+
+			</ul>
+
+		</section>
+	</main>
+</Layout>
