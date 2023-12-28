@@ -4,54 +4,70 @@ import Card from "../components/Card.astro";
 import Badge from "../components/Badge.astro";
 import LinkedIn from "../icons/LinkedIn.astro";
 import GitHub from "../icons/GitHub.astro";
+import SocialPill from "../components/SocialPill.astro";
+import Mail from "../icons/Mail.astro";
+import Experience from "../components/Experience.astro";
+import SectionContainer from "../components/SectionContainer.astro";
+import Perspective from "../icons/perspective.astro";
+import Maletin from "../icons/maletin.astro";
 ---
 
-<Layout title="Welcome to Astro.">
+<Layout title="Portafolio de Geider - Desarrollador y Programador Full Stack">
 	<main>
-		<section class="w-full lg:w-[740px] mx-auto py-44">
+		<SectionContainer class="py-44 pb-22">
 			<h1
 				class="text-white text-5xl font-bold flex flex-row gap-x-4 pb-4"
 			>
-				Hola, soy Geider Montaño <a 
-				href="https://www.linkedin.com/in/geider-andr%C3%A9s-monta%C3%B1o-zalazar-430393247/"
-				target="_blank"
-				rel="noopener"
-				class="flex justify-center items-center"
+				Hola, soy Geider Montaño <a
+					href="https://www.linkedin.com/in/geider-andr%C3%A9s-monta%C3%B1o-zalazar-430393247/"
+					target="_blank"
+					rel="noopener"
+					class="flex justify-center items-center"
 				>
-				<div class="flex justify-center items-center">
-					<Badge>Listo para Chambear</Badge>
-				</div>
-			</h1>
-			<h2 class="text-2xl text-wrap">
-				<span>Estoy aprendiendo a programar y a crear sitios web. </span> <span class="opacity-80" >Me gusta
-					mucho el diseño y la programación. </span>
-			</h2>
+					<div class="flex justify-center items-center">
+						<Badge>Listo para Chambear</Badge>
+					</div>
+				</a>
+				<h2 class="text-2xl text-wrap">
+					<span
+						>Estoy aprendiendo a programar y a crear sitios web.
+					</span>
+					<span class="opacity-80"
+						>Me gusta mucho el diseño y la programación.
+					</span>
+				</h2>
 
-			<ul>
-				<li>
-					<a
+				<nav class="flex gap-x-5 mt-2">
+					<SocialPill
 						href="https://www.linkedin.com/in/geider-andr%C3%A9s-monta%C3%B1o-zalazar-430393247/"
-						target="_blank"
-						rel="noopener"
-						class="flex justify-center items-center"
 					>
-						<LinkedIn class="w-6 h-6" />
-					</a>
-				</li>
+						<LinkedIn class="size-5" />
+						 LinkedIn
+					</SocialPill>
+					
+					<SocialPill href="https://github.com/KPOETA1">
+						<GitHub class="size-5" />
+						 GitHub
+					</SocialPill>
 
-				<li>
-					<a
-						href="https://github.com/KPOETA1"
-						target="_blank"
-						rel="noopener"
-						class="flex justify-center items-center"
-					>
-						<GitHub class="w-6 h-6" />
-					</a>
+					<SocialPill href="https://github.com/KPOETA1">
+						<Mail class="size-5" />
+						 Geideran808087@gmail.com
+					</SocialPill>
 
 
-			</ul>
+				</nav>
+			</h1>
+		</SectionContainer>
 
-		</section>
+		<SectionContainer id="experience">
+			<h2 class="text-2xl font-semibold mb-5 flex gap-x-3 items-center"> 
+				<Maletin class="size-7" />
+				Experiencia Laboral
+			</h2>
+			<Perspective class="size-6" />
+			<Experience/>
+		</SectionContainer>
+
 	</main>
 </Layout>
