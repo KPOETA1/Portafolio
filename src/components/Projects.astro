@@ -22,10 +22,10 @@ const PROJECTS = [
             "Created from scratch with Next.js and Tailwind CSS. It's a library with SVG logos from the most popular brands. Optimized for SEO and performance.",
         link: "https://svgl.vercel.app/",
         github: "https://github.com/pheralb/svgl",
-        image1: "/roma/roma.jpg",
-        image2: "/roma/roma1.jpg",
-        image3: "/roma/roma2.jpg",
-        imageproyecto: "/projects/1.jpg",
+        image0: "/roma/roma.jpg",
+        image1: "/roma/roma1.jpg",
+        image2: "/roma/roma2.jpg", // funciona
+        imageproyecto: "/projects/1.jpg", // funciona
 
 
         tags: [TAGS.NEXT, TAGS.TAILWIND],
@@ -34,7 +34,7 @@ const PROJECTS = [
 ---
 
 {
-    PROJECTS.map(({ image1,image2,image3, imageproyecto, title, description, tags, github }) => (
+    PROJECTS.map(({ image0,image1,image2, imageproyecto, title, description, tags, github }) => (
         <article>
             <h3 class="text-2xl font-semibold text-yellow-200 mb-2">{title}</h3>
             <p class="text-lg text-white mb-4 text-pretty">{description}</p>
@@ -64,27 +64,24 @@ const PROJECTS = [
             </ul>
 <div class="">
 
-	<div id="default-carousel" class="relative" data-carousel="static">
+	<div id="default-carousel" class="relative" data-carousel="static" data-carousel-item="slide">
         <!-- Carousel wrapper -->
-        <div class="overflow-hidden rounded aspect-video w-full h-80 sm:h-96 md:h-120 lg:h-144 xl:h-160 2xl:h-176">
-            <!-- Item 1 -->
-            <div class="hidden duration-700 ease-in-out" data-carousel-item>
-                <img src={image1} class="rounded shadow-xl shadow-white/5 aspect-video" alt="..."/>
-            </div>
+        <div class="rounded aspect-video w-full h-80 sm:h-96 md:h-120 lg:h-144 xl:h-160 2xl:h-176" >
+
 
             <!-- Item 2 -->
-            <div class=" hidden duration-700 ease-in-out" data-carousel-item>
-                <img src={image2} class="rounded shadow-xl shadow-white/5 aspect-video" alt="..."/>
+            <div class="hidden duration-300 ease-in-out" data-carousel-item="2"  >
+                <img src={image2}  class="rounded shadow-xl shadow-white/5 aspect-video" alt="hola2"/>
             </div>
 
             <!-- Item 3 -->
-            <div class=" hidden duration-700 ease-in-out" data-carousel-item>
-                <img src={image3} class="rounded shadow-xl shadow-white/5 aspect-video" alt="..."/>
+            <div class="hidden duration-400 ease-in-out" data-carousel-item="1"  >
+                <img src={image1} data-carousel-item  class="rounded shadow-xl shadow-white/5 aspect-video" alt="hola3"/>
             </div>
 
-            <!-- Item 4 -->
-            <div class=" hidden duration-700 ease-in-out" data-carousel-item>
-                <img src={imageproyecto} class="rounded shadow-xl shadow-white/5 aspect-video" alt="..."/>
+            <!-- Item 1 -->
+            <div class="hidden duration-200 ease-in-out" data-carousel-item="0">
+                <img src={image0} class="rounded shadow-xl shadow-white/5 aspect-video" alt="hola"/>
             </div>
 
 
@@ -95,7 +92,6 @@ const PROJECTS = [
             <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 1" data-carousel-slide-to="0"></button>
             <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 2" data-carousel-slide-to="1"></button>
             <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 3" data-carousel-slide-to="2"></button>
-            <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 4" data-carousel-slide-to="3"></button>
         </div>
         <!-- Slider controls -->
         <button type="button" class="flex absolute top-0 left-0 z-30 justify-center items-center px-4 h-full cursor-pointer group focus:outline-none" data-carousel-prev>
