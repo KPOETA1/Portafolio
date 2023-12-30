@@ -2,6 +2,8 @@
 import GitHub from "../icons/GitHub.astro";
 import NextJS from "../icons/NextJs.astro";
 import Tailwind from "../icons/Tailwind.astro";
+import ThreeJS from "../icons/ThreeJs.astro";
+import Firebase from "../icons/Firebase.astro";
 
 const TAGS = {
     NEXT: {
@@ -14,18 +16,39 @@ const TAGS = {
         class: "bg-[#003159] text-white",
         icon: Tailwind,
     },
+    THREE: {
+        name: "Three.js",
+        class: "bg-black text-white",
+        icon: ThreeJS,
+    },
+    FIREBASE: {
+        name: "Firebase",
+        class: "bg-[#FFFF00] text-black",
+        icon: Firebase,
+    },
 };
 const PROJECTS = [
     {
-        title: "SVGL - A beautiful library with SVG logos",
+        title: "Roma Invicta",
         description:
-            "Created from scratch with Next.js and Tailwind CSS. It's a library with SVG logos from the most popular brands. Optimized for SEO and performance.",
-        link: "https://svgl.vercel.app/",
-        github: "https://github.com/pheralb/svgl",
+            "Desarrollado desde cero utilizando Next.js, Tailwind CSS, ThreeJS y Firebase. Se trata de una plataforma interactiva que sumerge a los usuarios en la fascinante historia de la Antigua Roma. La experiencia incluye objetos en 3D que permiten una exploración detallada y un minijuego tipo quiz para enriquecer la interacción. El sitio está optimizado para ofrecer una experiencia de usuario envolvente, combinando recursos visuales con datos históricos.",
+        link: "https://frontend-delta-opal.vercel.app/",
+        github: "https://github.com/romaInvictaa/frontend",
         image0: "/roma/roma.jpg",
         image1: "/roma/roma1.jpg",
         image2: "/roma/roma2.jpg",
-        tags: [TAGS.NEXT, TAGS.TAILWIND],
+        tags: [TAGS.NEXT, TAGS.TAILWIND, TAGS.THREE, TAGS.FIREBASE],
+    },
+    {
+        title: "El Eden",
+        description:
+            "Desarrollado desde cero utilizando Next.js, Tailwind CSS, ThreeJS y Firebase. Se trata de una plataforma interactiva que sumerge a los usuarios en la fascinante historia de la Antigua Roma. La experiencia incluye objetos en 3D que permiten una exploración detallada y un minijuego tipo quiz para enriquecer la interacción. El sitio está optimizado para ofrecer una experiencia de usuario envolvente, combinando recursos visuales con datos históricos.",
+        link: "https://frontend-delta-opal.vercel.app/",
+        github: "",
+        image0: "/eden/eden.jpg",
+        image1: "/eden/eden1.jpg",
+        image2: "/eden/eden2.jpg",
+        tags: [TAGS.NEXT, TAGS.TAILWIND, TAGS.THREE, TAGS.FIREBASE],
     },
 ];
 ---
@@ -46,7 +69,7 @@ const PROJECTS = [
                     <h3 class="text-2xl font-semibold text-yellow-200 mb-2">
                         {title}
                     </h3>
-                    <p class="text-lg text-white mb-4 text-pretty">
+                    <p class="text-lg text-white mb-4 text-balance">
                         {description}
                     </p>
                     <ul class="flex gap-x-2 flex-row mb-2">
@@ -76,7 +99,7 @@ const PROJECTS = [
 
                     <script src="https://unpkg.com/flowbite@1.4.0/dist/flowbite.js"></script>
                 </article>
-                <div class="">
+                <div class="mb-16">
                     <div
                         id="default-carousel"
                         class="relative  "
