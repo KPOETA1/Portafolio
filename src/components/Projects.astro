@@ -4,6 +4,10 @@ import NextJS from "../icons/NextJs.astro";
 import Tailwind from "../icons/Tailwind.astro";
 import ThreeJS from "../icons/ThreeJs.astro";
 import Firebase from "../icons/Firebase.astro";
+import Html from "../icons/Html.astro";
+import JavaScript from "../icons/JavaScript.astro";
+import Css from "../icons/Css.astro";
+import React from "../icons/React.astro";
 
 const TAGS = {
     NEXT: {
@@ -23,8 +27,28 @@ const TAGS = {
     },
     FIREBASE: {
         name: "Firebase",
-        class: "bg-[#FFFF00] text-black",
+        class: "bg-[#f27d52] text-white",
         icon: Firebase,
+    },
+    HTML: {
+        name: "HTML",
+        class: "bg-[#E34F26] text-white",
+        icon: Html,
+    },
+    JAVASCRIPT: {
+        name: "JavaScript",
+        class: "bg-[#de741c] text-white",
+        icon: JavaScript,
+    },
+    CSS: {
+        name: "CSS",
+        class: "bg-[#1572B6] text-white",
+        icon: Css,
+    },
+    REACT: {
+        name: "React",
+        class: "bg-[#000000] text-white",
+        icon: React,
     },
 };
 const PROJECTS = [
@@ -44,11 +68,11 @@ const PROJECTS = [
         description:
             "Desarrollado desde cero utilizando Next.js, Tailwind CSS, ThreeJS y Firebase. Se trata de una plataforma interactiva que sumerge a los usuarios en la fascinante historia de la Antigua Roma. La experiencia incluye objetos en 3D que permiten una exploración detallada y un minijuego tipo quiz para enriquecer la interacción. El sitio está optimizado para ofrecer una experiencia de usuario envolvente, combinando recursos visuales con datos históricos.",
         link: "https://frontend-delta-opal.vercel.app/",
-        github: "",
+        github: "https://github.com/KPOETA1/El-eden",
         image0: "/eden/eden.jpg",
         image1: "/eden/eden1.jpg",
         image2: "/eden/eden2.jpg",
-        tags: [TAGS.NEXT, TAGS.TAILWIND, TAGS.THREE, TAGS.FIREBASE],
+        tags: [TAGS.HTML, TAGS.JAVASCRIPT, TAGS.CSS, TAGS.REACT],
     },
 ];
 ---
