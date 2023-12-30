@@ -16,7 +16,7 @@ const TAGS = {
         icon: NextJS,
     },
     TAILWIND: {
-        name: "Tailwind CSS",
+        name: "Tailwind",
         class: "bg-[#003159] text-white",
         icon: Tailwind,
     },
@@ -50,6 +50,11 @@ const TAGS = {
         class: "bg-[#000000] text-white",
         icon: React,
     },
+    GitHub: {
+        name: "GitHub",
+        class: "bg-[#000000] text-white",
+        icon: GitHub,
+    },
 };
 const PROJECTS = [
     {
@@ -61,7 +66,7 @@ const PROJECTS = [
         image0: "/roma/roma.jpg",
         image1: "/roma/roma1.jpg",
         image2: "/roma/roma2.jpg",
-        tags: [TAGS.NEXT, TAGS.TAILWIND, TAGS.THREE, TAGS.FIREBASE],
+        tags: [TAGS.NEXT, TAGS.TAILWIND, TAGS.THREE, TAGS.FIREBASE, TAGS.GitHub],
     },
     {
         title: "El Eden",
@@ -72,7 +77,7 @@ const PROJECTS = [
         image0: "/eden/eden.jpg",
         image1: "/eden/eden1.jpg",
         image2: "/eden/eden2.jpg",
-        tags: [TAGS.HTML, TAGS.JAVASCRIPT, TAGS.CSS, TAGS.REACT],
+        tags: [TAGS.HTML, TAGS.JAVASCRIPT, TAGS.CSS, TAGS.REACT, TAGS.GitHub],
     },
 ];
 ---
@@ -86,7 +91,6 @@ const PROJECTS = [
             title,
             description,
             tags,
-            github,
         }) => (
             <>
                 <article>
@@ -96,29 +100,17 @@ const PROJECTS = [
                     <p class="text-lg text-white mb-4 text-balance">
                         {description}
                     </p>
-                    <ul class="flex gap-x-2 flex-row mb-2">
+                    <ul class="flex flex-col md:mb-8 sm:flex-row flex-wrap gap-x-2 flex-row mb-2">
                         {tags.map((tag) => (
                             <li>
                                 <span
-                                    class={`flex gap-x-2 rounded-full text-xs ${tag.class} py-1 px-2`}
+                                    class={`flex gap-x-2 mb-1 rounded-full text-xs ${tag.class} py-1 px-2`}
                                 >
-                                    <tag.icon class="size-4" />
+                                    <tag.icon class="size-4 " />
                                     {tag.name}
                                 </span>
                             </li>
                         ))}
-                        <li>
-                            <span class="flex  gap-x-2 rounded-full text-xs bg-[#333] py-1 px-2">
-                                <GitHub class="size-4 " />
-                                <a
-                                    href={github}
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                >
-                                    Github
-                                </a>
-                            </span>
-                        </li>
                     </ul>
 
                     <script src="https://unpkg.com/flowbite@1.4.0/dist/flowbite.js"></script>
