@@ -2,6 +2,12 @@
 import GitHub from "../icons/GitHub.astro";
 import NextJS from "../icons/NextJs.astro";
 import Tailwind from "../icons/Tailwind.astro";
+import ThreeJS from "../icons/ThreeJs.astro";
+import Firebase from "../icons/Firebase.astro";
+import Html from "../icons/Html.astro";
+import JavaScript from "../icons/JavaScript.astro";
+import Css from "../icons/Css.astro";
+import React from "../icons/React.astro";
 
 const TAGS = {
     NEXT: {
@@ -14,55 +20,227 @@ const TAGS = {
         class: "bg-[#003159] text-white",
         icon: Tailwind,
     },
+    THREE: {
+        name: "Three.js",
+        class: "bg-black text-white",
+        icon: ThreeJS,
+    },
+    FIREBASE: {
+        name: "Firebase",
+        class: "bg-[#f27d52] text-white",
+        icon: Firebase,
+    },
+    HTML: {
+        name: "HTML",
+        class: "bg-[#E34F26] text-white",
+        icon: Html,
+    },
+    JAVASCRIPT: {
+        name: "JavaScript",
+        class: "bg-[#de741c] text-white",
+        icon: JavaScript,
+    },
+    CSS: {
+        name: "CSS",
+        class: "bg-[#1572B6] text-white",
+        icon: Css,
+    },
+    REACT: {
+        name: "React",
+        class: "bg-[#000000] text-white",
+        icon: React,
+    },
 };
 const PROJECTS = [
     {
-        title: "SVGL - A beautiful library with SVG logos",
+        title: "Roma Invicta",
         description:
-            "Created from scratch with Next.js and Tailwind CSS. It's a library with SVG logos from the most popular brands. Optimized for SEO and performance.",
-        link: "https://svgl.vercel.app/",
-        github: "https://github.com/pheralb/svgl",
-        image: "/projects/1.jpg",
-        tags: [TAGS.NEXT, TAGS.TAILWIND],
+            "Desarrollado desde cero utilizando Next.js, Tailwind CSS, ThreeJS y Firebase. Se trata de una plataforma interactiva que sumerge a los usuarios en la fascinante historia de la Antigua Roma. La experiencia incluye objetos en 3D que permiten una exploración detallada y un minijuego tipo quiz para enriquecer la interacción. El sitio está optimizado para ofrecer una experiencia de usuario envolvente, combinando recursos visuales con datos históricos.",
+        link: "https://frontend-delta-opal.vercel.app/",
+        github: "https://github.com/romaInvictaa/frontend",
+        image0: "/roma/roma.jpg",
+        image1: "/roma/roma1.jpg",
+        image2: "/roma/roma2.jpg",
+        tags: [TAGS.NEXT, TAGS.TAILWIND, TAGS.THREE, TAGS.FIREBASE],
+    },
+    {
+        title: "El Eden",
+        description:
+            "Desarrollado desde cero utilizando Next.js, Tailwind CSS, ThreeJS y Firebase. Se trata de una plataforma interactiva que sumerge a los usuarios en la fascinante historia de la Antigua Roma. La experiencia incluye objetos en 3D que permiten una exploración detallada y un minijuego tipo quiz para enriquecer la interacción. El sitio está optimizado para ofrecer una experiencia de usuario envolvente, combinando recursos visuales con datos históricos.",
+        link: "https://frontend-delta-opal.vercel.app/",
+        github: "https://github.com/KPOETA1/El-eden",
+        image0: "/eden/eden.jpg",
+        image1: "/eden/eden1.jpg",
+        image2: "/eden/eden2.jpg",
+        tags: [TAGS.HTML, TAGS.JAVASCRIPT, TAGS.CSS, TAGS.REACT],
     },
 ];
 ---
 
 {
-    PROJECTS.map(({ image, title, description, tags, github }) => (
-        <article>
-            <h3 class="text-2xl font-semibold text-yellow-200 mb-2">{title}</h3>
-            <p class="text-lg text-white mb-4 text-pretty">{description}</p>
-            <ul class="flex gap-x-2 flex-row mb-2">
-                {tags.map((tag) => (
-                    <li>
-                        <span
-                            class={`flex gap-x-2 rounded-full text-xs ${tag.class} py-1 px-2`}
+    PROJECTS.map(
+        ({
+            image0,
+            image1,
+            image2,
+            title,
+            description,
+            tags,
+            github,
+        }) => (
+            <>
+                <article>
+                    <h3 class="text-2xl font-semibold text-yellow-200 mb-2">
+                        {title}
+                    </h3>
+                    <p class="text-lg text-white mb-4 text-balance">
+                        {description}
+                    </p>
+                    <ul class="flex gap-x-2 flex-row mb-2">
+                        {tags.map((tag) => (
+                            <li>
+                                <span
+                                    class={`flex gap-x-2 rounded-full text-xs ${tag.class} py-1 px-2`}
+                                >
+                                    <tag.icon class="size-4" />
+                                    {tag.name}
+                                </span>
+                            </li>
+                        ))}
+                        <li>
+                            <span class="flex  gap-x-2 rounded-full text-xs bg-[#333] py-1 px-2">
+                                <GitHub class="size-4 " />
+                                <a
+                                    href={github}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                >
+                                    Github
+                                </a>
+                            </span>
+                        </li>
+                    </ul>
+
+                    <script src="https://unpkg.com/flowbite@1.4.0/dist/flowbite.js"></script>
+                </article>
+                <div class="mb-16">
+                    <div
+                        id="default-carousel"
+                        class="relative  "
+                        data-carousel="static"
+                    >
+                        <div class="overflow-hidden relative rounded shadow-2xl shadow-white/10 aspect-video">
+                            <div
+                                class="hidden duration-700 ease-in-out"
+                                data-carousel-item
+                            >
+                                <span class="">
+
+                                </span>
+                                <img
+                                    src={image0}
+                                    class="rounded shadow-2xl shadow-white/10 aspect-video"
+                                    alt="..."
+                                />
+                            </div>
+
+                            <div
+                                class="hidden duration-700 ease-in-out"
+                                data-carousel-item
+                            >
+                                <img
+                                    src={image1}
+                                    class="rounded shadow-2xl shadow-white/10 aspect-video"
+                                    alt="..."
+                                />
+                            </div>
+
+                            <div
+                                class="hidden duration-700 ease-in-out"
+                                data-carousel-item
+                            >
+                                <img
+                                    src={image2}
+                                    class="rounded shadow-2xl shadow-white/10 aspect-video"
+                                    alt="..."
+                                />
+                            </div>
+                        </div>
+
+                        <div class="flex absolute bottom-5 left-1/2 z-30 space-x-3 -translate-x-1/2">
+                            <button
+                                type="button"
+                                class="w-3 h-3 rounded-full"
+                                aria-current="false"
+                                aria-label="Slide 1"
+                                data-carousel-slide-to="0"
+                            />
+                            <button
+                                type="button"
+                                class="w-3 h-3 rounded-full"
+                                aria-current="false"
+                                aria-label="Slide 2"
+                                data-carousel-slide-to="1"
+                            />
+                            <button
+                                type="button"
+                                class="w-3 h-3 rounded-full"
+                                aria-current="false"
+                                aria-label="Slide 3"
+                                data-carousel-slide-to="2"
+                            />
+                        </div>
+
+                        <button
+                            type="button"
+                            class="flex absolute top-0 left-0 z-30 justify-center items-center px-4 h-full cursor-pointer group focus:outline-none"
+                            data-carousel-prev
                         >
-                            <tag.icon class="size-4" />
-                            {tag.name}
-                        </span>
-                    </li>
-                ))}
-                <li>
-                    <span class="flex  gap-x-2 rounded-full text-xs bg-[#333] py-1 px-2">
-                        <GitHub class="size-4 " />
-                        <a
-                            href={github}
-                            target="_blank"
-                            rel="noopener noreferrer"
+                            <span class="inline-flex justify-center items-center w-8 h-8 rounded-full sm:w-10 sm:h-10 bg-white/30  group-focus:ring-4 group-focus:ring-white  group-focus:outline-none">
+                                <svg
+                                    class="w-5 h-5 text-white sm:w-6 sm:h-6"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    viewBox="0 0 24 24"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                >
+                                    <path
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                        stroke-width="2"
+                                        d="M15 19l-7-7 7-7"
+                                    />
+                                </svg>
+                                <span class="hidden">Anterior</span>
+                            </span>
+                        </button>
+                        <button
+                            type="button"
+                            class="flex absolute top-0 right-0 z-30 justify-center items-center px-4 h-full cursor-pointer group focus:outline-none"
+                            data-carousel-next
                         >
-                            Github
-                        </a>
-                    </span>
-                </li>
-            </ul>
-            <img
-                loading="lazy"
-                class="rounded shadow-2xl shadow-white/10 aspect-video"
-                src={image}
-                alt={`Captura de pantalla del proyecto ${image}`}
-            />
-        </article>
-    ))
+                            <span class="inline-flex justify-center items-center w-8 h-8 rounded-full sm:w-10 sm:h-10 bg-white/30 0 group-focus:ring-4 group-focus:ring-white  group-focus:outline-none">
+                                <svg
+                                    class="w-5 h-5 text-white sm:w-6 sm:h-6"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    viewBox="0 0 24 24"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                >
+                                    <path
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                        stroke-width="2"
+                                        d="M9 5l7 7-7 7"
+                                    />
+                                </svg>
+                                <span class="hidden">Siguiente</span>
+                            </span>
+                        </button>
+                    </div>
+                    <script src="https://cdn.tailwindcss.com/3.4.0" />
+                </div>
+            </>
+        ),
+    )
 }
