@@ -83,3 +83,45 @@
     </nav>
 </header>
 
+
+<script>
+document.addEventListener('DOMContentLoaded', (event) => {
+  const toggleButton = document.querySelector('[data-collapse-toggle="mobile-menu-2"]');
+  const navbar = document.getElementById('mobile-menu-2');
+
+  // Verificar si toggleButton y navbar no son nulos
+  if (toggleButton && navbar) {
+    // Función para mostrar el menú
+    const showMenu = () => {
+      navbar.classList.remove('hidden');
+    };
+
+    // Evento de clic en el botón de toggle para mostrar el menú
+    toggleButton.addEventListener('click', showMenu);
+
+    // Evento de clic en cualquier parte de la página
+    document.addEventListener('click', (event) => {
+      // Verificar si event.target no es nulo
+      if (event.target) {
+        const isClickInsideNavbar = navbar.contains(event.target as Node);
+        const isClickInsideToggleButton = toggleButton.contains(event.target as Node);
+
+        if (!isClickInsideNavbar && !isClickInsideToggleButton) {
+          navbar.classList.add('hidden');
+        }
+      }
+    });
+
+    // Evento de clic en enlaces del menú para ocultar el menú
+    const menuLinks = navbar.querySelectorAll('a');
+    menuLinks.forEach((link) => {
+      link.addEventListener('click', () => {
+        navbar.classList.add('hidden');
+      });
+    });
+  } else {
+    console.error('No se encontró el botón de toggle o el menú.');
+  }
+});
+
+</script>
